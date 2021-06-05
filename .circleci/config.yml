@@ -14,7 +14,7 @@ workflows:
   constantly_build:
     triggers:
       - schedule:
-          cron: "23 1,7,14,19 * * *"
+          cron: "32 1,7,13,19 * * *"
           filters:
             branches:
               only:
@@ -22,7 +22,7 @@ workflows:
                 - master
                 - circleci-project-setup
       - schedule:
-          cron: "23 1,7,14,19 * * *"
+          cron: "32 1,7,13,19 * * *"
           filters:
             branches:
               only:
@@ -30,7 +30,7 @@ workflows:
                 - master
                 - circleci-project-setup
       - schedule:
-          cron: "23 1,7,14,19 * * *"
+          cron: "32 1,7,13,19 * * *"
           filters:
             branches:
               only:
@@ -38,7 +38,7 @@ workflows:
                 - master
                 - circleci-project-setup
       - schedule:
-          cron: "23 1,7,14,19 * * *"
+          cron: "32 1,7,13,19 * * *"
           filters:
             branches:
               only:
